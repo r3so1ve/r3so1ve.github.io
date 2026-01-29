@@ -21,3 +21,13 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
+
+theme: null
+permalink: /:categories/:title/
+timezone: Asia/Tashkent
+
+navbar:
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about/

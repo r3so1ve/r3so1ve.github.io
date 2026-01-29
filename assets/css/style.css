@@ -1,0 +1,22 @@
+---
+---
+
+/* Your custom overrides */
+:root {
+  --bg: #07060a;
+  --fg: #eae7ff;
+  --accent: #6f00d6;   
+  --accent2: #17bd54;  
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent2);
+}

@@ -11,5 +11,6 @@ Documenting my journey in:
 - Active Directory Security
 - Network Analysis
 - Vulnerability Research
+and many more
 
 🔗 Blog: [securityforge.dev](https://r3so1ve.github.io)
