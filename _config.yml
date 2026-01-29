@@ -26,6 +26,7 @@ theme: null
 permalink: /:categories/:title/
 timezone: Asia/Tashkent
 
+# Navbar links
 navbar:
   - title: Blog
     url: /blog/
