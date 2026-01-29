@@ -1,0 +1,12 @@
+@import url("{{ site.theme }}");
+
+/* Load fonts via CSS (safer across themes) */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: "Ubuntu", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+code, pre, kbd, samp {
+  font-family: "JetBrains Mono", "Hack", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
