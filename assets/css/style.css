@@ -5,7 +5,7 @@
   --bg: #07060a;
   --fg: #eae7ff;
   --accent: #6a00ce;  
-  --accent2: #00c500; 
+  --accent2: #00f85b; 
 }
 body {
   background: var(--bg);
