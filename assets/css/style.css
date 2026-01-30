@@ -2,10 +2,10 @@
 ---
 
 :root {
-  --bg: #07060a;
+  --bg: #19181f;
   --fg: #eae7ff;
-  --accent: #6a00ce;  
-  --accent2: #00c500; 
+  --accent: #ff1818;  
+  --accent2: #f01313; 
 }
 body {
   background: var(--bg);
