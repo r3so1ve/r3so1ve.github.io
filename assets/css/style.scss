@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  --bg: #19181f;
+  --fg: #eae7ff;
+  --accent: #ff1818;
+  --accent2: #f01313;
+}
+body { background: var(--bg); color: var(--fg); }
+a { color: var(--accent); }
+a:hover { color: var(--accent2); }

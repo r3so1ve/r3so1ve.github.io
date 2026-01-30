@@ -22,7 +22,6 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 
-theme: null
 permalink: /:categories/:title/
 timezone: Asia/Tashkent
 
