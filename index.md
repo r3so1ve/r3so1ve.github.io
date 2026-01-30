@@ -3,13 +3,15 @@ layout: default
 title: Security Forge
 ---
 
-# Security Forge
+# <span class="sf-red">Security</span> <span class="sf-white">Forge</span>
 
 Welcome! I am Artur and write about:
 - Web Pentesting
 - Active Directory Security
 - Network Analysis
 - Vulnerability Research
+
+
 
 ## Latest posts
 <ul>
