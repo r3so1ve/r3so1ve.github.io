@@ -13,4 +13,4 @@ Documenting my journey in:
 - Vulnerability Research
 and many more
 
-🔗 Blog: [securityforge.dev](https://r3so1ve.github.io)
+🔗 Blog: [securityforge.is-a.dev](https://securityforge.is-a.dev)
