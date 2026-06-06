@@ -1,0 +1,35 @@
+---
+layout: base.njk
+aboutpage: true
+title: About
+permalink: /about/
+---
+<main class="frame post-shell">
+  <article class="post post-wide">
+    <h1 class="post-title">About</h1>
+    <p class="post-lede">{{ site.about }}</p>
+
+    <hr class="post-rule">
+
+    <h2>What this is</h2>
+    <p>{{ site.description }}</p>
+
+    <h2>Contact</h2>
+    <ul>
+      {% if site.github %}<li>GitHub: <a href="{{ site.github }}">{{ site.githubLabel or site.github }}</a></li>{% endif %}
+      {% if site.email %}<li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% endif %}
+      <li>RSS: <a href="/feed.xml">/feed.xml</a></li>
+      {% if not site.github and not site.email %}<li>Contact details coming soon.</li>{% endif %}
+    </ul>
+
+    {% if site.pgp.fingerprint %}
+    <h2>PGP</h2>
+    <div class="fingerprint"><span class="label">PGP</span>{{ site.pgp.fingerprint | safe }}</div>
+    {% endif %}
+
+    <div class="post-eof">
+      <span>EOF</span>
+      <a href="/">↑ back to archive</a>
+    </div>
+  </article>
+</main>

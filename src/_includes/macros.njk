@@ -1,0 +1,5 @@
+{% macro sev(s) %}<span class="sev" data-s="{{ s }}"><span class="sq" aria-hidden="true"></span>{{ s }}</span>{% endmacro %}
+
+{% macro sevSquare(s) %}<span class="sev" data-s="{{ s }}" title="{{ s }}"><span class="sq" aria-hidden="true"></span></span>{% endmacro %}
+
+{% macro asciiRule(label) %}<div class="ascii-rule" aria-hidden="true">──────<span class="label">[ {{ label }} ]</span>────────────────────────────────────────────────────────────────────────────────</div>{% endmacro %}

@@ -1,0 +1,6 @@
+node_modules/
+_site/
+.DS_Store
+.obsidian/
+ADDING-A-POST.md
+BACKLOG.md

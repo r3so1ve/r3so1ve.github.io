@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-density="default" data-width="default">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and title != site.title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }} — Cybersecurity, Pentesting, Vulnerability Research{% endif %}</title>
+  <meta name="description" content="{{ description or summary or site.description }}">
+  <meta property="og:title" content="{{ title or site.title }}">
+  <meta property="og:description" content="{{ description or summary or site.description }}">
+  <meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
+  <script>(function(){try{var t=localStorage.getItem("sf-theme")||"dark";document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Major+Mono+Display&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <span class="reg tl" aria-hidden="true"></span>
+  <span class="reg tr" aria-hidden="true"></span>
+  <span class="reg bl" aria-hidden="true"></span>
+  <span class="reg br" aria-hidden="true"></span>
+
+  <header class="topbar">
+    <div class="frame topbar-inner">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/assets/img/logo.jpg" alt="" width="24" height="24">
+        <span class="brand-name">{{ site.title }}</span>
+        <span class="brand-slash">/</span>
+        <span class="brand-tag">{{ site.brandTag }}</span>
+      </a>
+      <nav class="topnav" aria-label="primary">
+        <a href="/"{% if homepage %} class="active"{% endif %}>archive</a>
+        <a href="/about/"{% if aboutpage %} class="active"{% endif %}>about</a>
+      </nav>
+      <div class="topright">
+        {% if homepage %}<span class="search-hint">press <span class="kbd">/</span> to search</span>{% else %}<a href="/" class="kbd" style="text-decoration:none;padding:3px 8px;">← archive</a>{% endif %}
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="toggle theme">◐ dark</button>
+      </div>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="frame footer">
+    <div class="l">© {% if site.since %}{{ site.since }}–{% endif %}{{ build.year }} {{ site.title }}{% if site.license %} · all writing {{ site.license }}{% endif %}</div>
+    <div class="c">└──────[ end of file ]──────┘</div>
+    <div class="r">{% if site.github %}<a href="{{ site.github }}">github</a> · {% endif %}<a href="/sitemap.xml">sitemap</a>{% if site.pgp.fingerprint %} · <a href="{{ site.pgp.url or '#' }}">pgp</a>{% endif %}</div>
+  </footer>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+<main class="frame post-shell">
+  <article class="post">
+    <div class="post-meta">
+      <span class="sev" data-s="{{ sev or 'info' }}"><span class="sq" aria-hidden="true"></span>{{ sev or 'info' }}</span>
+      <span>{{ date | isoDate }}</span>
+      <span>· {{ content | readingTime }}</span>
+      {% if tag %}<span>· #{{ tag }}</span>{% endif %}
+    </div>
+
+    <h1 class="post-title">{{ title }}</h1>
+    {% if summary %}<p class="post-lede">{{ summary }}</p>{% endif %}
+
+    <hr class="post-rule">
+
+    {{ content | safe }}
+
+    <div class="post-eof">
+      <span>EOF</span>
+      <a href="/">↑ back to archive</a>
+    </div>
+  </article>
+</main>
