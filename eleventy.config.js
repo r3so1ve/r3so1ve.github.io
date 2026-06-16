@@ -41,8 +41,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("wordCount", (c) => countWords(c));
   eleventyConfig.addFilter("readingTime", (c) => Math.max(1, Math.ceil(countWords(c) / WPM)) + " min");
   eleventyConfig.addFilter("sumWords", (posts) =>
-    (posts || []).reduce((n, p) => n + countWords(p.templateContent), 0)
-  );
+  (posts || []).reduce((n, p) => {
+    let content = "";
+    try { content = p.templateContent; } catch (e) { content = ""; }
+    return n + countWords(content);
+  }, 0)
+);
   eleventyConfig.addFilter("compactNumber", (n) => {
     n = Number(n) || 0;
     if (n >= 1000) return (Math.round(n / 100) / 10).toString().replace(/\.0$/, "") + "k";
