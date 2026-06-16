@@ -987,16 +987,3 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 /* Cap post image size so screenshots don't fill the full-width post */
 .post img, .post figure img { max-width: min(100%, 820px); }
-
-
-/* 1. register the font */
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/inter-regular.woff2") format("woff2");
-  font-weight: 400; font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/inter-medium.woff2") format("woff2");
-  font-weight: 500; font-display: swap;
-}

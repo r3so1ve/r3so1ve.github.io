@@ -1,5 +1,5 @@
 // Eleventy configuration (CommonJS). No "type":"module" in package.json.
-// Zero plugin dependencies on purpose — Markdown, RSS and the sitemap are all
+// Zero plugin dependencies on purpose — Markdown and the sitemap are all
 // produced from built-in features so there is less that can break on upgrade.
 
 const WPM = 200; // words-per-minute used for reading-time estimates

@@ -8,14 +8,17 @@ module.exports = {
 
   eleventyComputed: {
     // draft: true  ->  visible in `npm run serve`, but NOT built for production.
-    // (ELEVENTY_RUN_MODE is "build" for `npm run build`, "serve"/"watch" locally.)
     eleventyExcludeFromCollections: (data) =>
       data.draft && process.env.ELEVENTY_RUN_MODE === "build"
         ? true
         : data.eleventyExcludeFromCollections || false,
 
-    // Don't even write a page for a draft in a production build.
+    // File-style URLs: /posts/<slug>.html (drafts get no page in a build).
+    // This makes a relative image path like ../assets/img/x.png resolve the
+    // same way in Obsidian and on the live site.
     permalink: (data) =>
-      data.draft && process.env.ELEVENTY_RUN_MODE === "build" ? false : data.permalink,
+      data.draft && process.env.ELEVENTY_RUN_MODE === "build"
+        ? false
+        : `/posts/${data.page.fileSlug}.html`,
   },
 };
