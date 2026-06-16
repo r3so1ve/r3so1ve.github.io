@@ -1052,3 +1052,30 @@ a:focus-visible, button:focus-visible,
   .masthead h1 .title-line { white-space: normal; }
   .status-inner { overflow-x: auto; }
 }
+
+/* ====================================================================
+   FIX: homepage was forcing ~780px on phones (browser then zoomed out).
+   Cause: collapsed grid used "1fr" (= minmax(auto,1fr)); its default
+   min-width:auto refused to shrink below the widest unbreakable child
+   (the white-space:pre .ascii-rule). Result: locked ~764px column.
+   Fix: give the collapsed track a 0 minimum and let items shrink.
+   ==================================================================== */
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.main-grid > *,
+.side,
+.searchbar,
+.searchbar input,
+.ascii-rule { min-width: 0; }
+.ascii-rule { max-width: 100%; }
+
+/* Top bar must also fit the narrowest phones. The "← archive" button is
+   redundant with the nav "archive" link and the in-page "back to archive",
+   so it is dropped on very narrow screens to keep the bar on one line. */
+@media (max-width: 400px) {
+  .topbar-inner { gap: 8px; }
+  .theme-toggle { padding: 6px 8px; }
+  .topright { gap: 8px; }
+  .topright a.kbd { display: none; }
+}
