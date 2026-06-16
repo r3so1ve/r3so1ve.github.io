@@ -106,7 +106,6 @@ network:
 Apply and confirm:
 
 ```c
-​bash
 sudo netplan apply
 ip a            # ens32 should show 10.10.20.10/24
 ip route        # default via 10.10.20.1
@@ -116,7 +115,6 @@ ip route        # default via 10.10.20.1
 PowerShell:
 
 ```c
-powershell
 New-NetIPAddress -InterfaceAlias "Ethernet0" -IPAddress 10.10.10.10 -PrefixLength 24 -DefaultGateway 10.10.10.1
 ```
 
@@ -130,7 +128,6 @@ Get-NetIPAddress -AddressFamily IPv4
 Kali (the attacker, in the LAN). No static config; it takes a DHCP lease from pfSense in 10.10.10.0/24. Just confirm where it landed:
 
 ```c
-bash
 ip a            # an address in 10.10.10.0/24
 ```
 
@@ -160,14 +157,14 @@ A security control you can't demonstrate is just a hopeful comment in a config f
 
 From Kali (LAN): ​
 
-```bash
-bash ping -c3 10.10.20.10 # web01 in the DMZ -> replies ssh secforge@10.10.20.10 # logs straight into web01 ​
+```c
+ping -c3 10.10.20.10 # web01 in the DMZ -> replies ssh secforge@10.10.20.10 # logs straight into web01 ​
 ```
 
 From web01 (DMZ): 
 
-```bash
-bash ping -c3 1.1.1.1 # internet -> replies sudo apt update # internet -> works ping -c3 10.10.10.10 # the DC on the LAN -> 100% loss, blocked 
+```c
+ping -c3 1.1.1.1 # internet -> replies sudo apt update # internet -> works ping -c3 10.10.10.10 # the DC on the LAN -> 100% loss, blocked 
 ```
 
 From a machine on the trusted LAN, I can reach the web server in the DMZ. The ping replies, and SSH gives me a login prompt. Trusted reaching exposed: allowed.
