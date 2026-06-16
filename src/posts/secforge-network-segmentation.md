@@ -7,7 +7,7 @@ summary: "I built a home security lab split into three network zones. This post 
 topics:
   - network 
 featured: false
-draft: true
+draft: false
 ---
 Hello, I'm Artur — a penetration tester and infosec specialist at ONESEC in Tashkent, Uzbekistan, with a bit over two years in the field and a BSc in Computer Science and Engineering from Inha University (2026). Security has been attracting me for a long time. This is the field that's both impossibly broad and endlessly deep, and this blog is where I start writing my way through it. 
 
