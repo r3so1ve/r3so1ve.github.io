@@ -987,3 +987,68 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 /* Cap post image size so screenshots don't fill the full-width post */
 .post img, .post figure img { max-width: min(100%, 820px); }
+
+/* ====================================================================
+   Mobile + accessibility hardening  (appended; later source order wins)
+   No horizontal page scroll on any phone; comfortable tap targets;
+   visible keyboard focus; motion respected. Desktop look unchanged.
+   ==================================================================== */
+
+/* 1) Long unbreakable strings (URLs, JWTs, hashes, CVSS vectors) wrap
+      instead of widening the page. Code BLOCKS keep their own scroll. */
+.post p, .post li,
+.post-title, .post h2, .post h3,
+.about li .v, .activity-row .what {
+  overflow-wrap: anywhere;
+}
+.post :not(pre) > code { overflow-wrap: anywhere; }
+
+/* 2) Wide tables (finding metadata) scroll themselves, not the page.
+      The .table-wrap div is added in eleventy.config.js. */
+.table-wrap { overflow-x: auto; margin: 14px 0 22px; }
+.table-wrap .post-table { margin: 0; }
+.post-table th, .post-table td { overflow-wrap: anywhere; }
+
+/* 3) Stop iOS Safari from zooming when the search box is focused
+      (it auto-zooms any input whose text is smaller than 16px). */
+.searchbar input { font-size: 16px; }
+
+/* 4) Visible keyboard focus — the base reset removed outlines, which
+      hurts keyboard users. Mouse/touch users never see this ring. */
+a:focus-visible, button:focus-visible,
+.chip:focus-visible, .row:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.searchbar input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* 5) Respect "reduce motion" (caret blink, hovers, transitions). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* 6) Phones: larger tap targets + a footer that can't be squeezed. */
+@media (max-width: 560px) {
+  .topnav a       { padding: 8px 2px; }
+  .theme-toggle   { padding: 8px 10px; }
+  .topright a.kbd { padding: 7px 9px !important; }
+  .chip           { padding: 7px 11px; }
+  .row            { padding-top: 11px; padding-bottom: 11px; }
+
+  .footer { grid-template-columns: 1fr; text-align: center; gap: 8px; }
+  .footer .l, .footer .r { text-align: center; }
+  .footer .c { overflow-x: auto; }
+}
+
+/* 7) Very narrow phones (<=380px): keep the masthead title on screen. */
+@media (max-width: 380px) {
+  .masthead h1 { font-size: 30px; }
+  .masthead h1 .title-line { white-space: normal; }
+  .status-inner { overflow-x: auto; }
+}

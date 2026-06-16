@@ -29,7 +29,10 @@ module.exports = function (eleventyConfig) {
   //      .post-table class the stylesheet expects, so styles.css is untouched.
   eleventyConfig.amendLibrary("md", (md) => {
     md.set({ html: true, linkify: false, breaks: false });
-    md.renderer.rules.table_open = () => '<table class="post-table">\n';
+    // Wrap every table so it can scroll horizontally on narrow screens
+    // instead of forcing the whole page to scroll (CVSS vectors are long).
+    md.renderer.rules.table_open = () => '<div class="table-wrap"><table class="post-table">\n';
+    md.renderer.rules.table_close = () => '</table></div>\n';
   });
 
   // ---- Posts collection, newest first ----
