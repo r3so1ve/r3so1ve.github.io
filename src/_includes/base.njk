@@ -45,7 +45,7 @@
   <footer class="frame footer">
     <div class="l">© {% if site.since %}{{ site.since }}–{% endif %}{{ build.year }} {{ site.title }}</div>
     <div class="c">└──────[ end of file ]──────┘</div>
-    <div class="r">{% if site.github %}<a href="{{ site.github }}">github</a> · {% endif %}<a href="/sitemap.xml">sitemap</a>{% if site.pgp.fingerprint %} · <a href="{{ site.pgp.url or '#' }}">pgp</a>{% endif %}</div>
+    <div class="r">{% if site.github %}<a href="{{ site.github }}">github</a>{% endif %}{% if site.pgp.fingerprint %}{% if site.github %} · {% endif %}<a href="{{ site.pgp.url or '#' }}">pgp</a>{% endif %}</div>
   </footer>
 
   <script src="/assets/app.js" defer></script>

@@ -1,6 +1,6 @@
 ---
 title: Network Segmentation Is the First Security Control. Here's the Proof.
-date: 2026-06-09
+date: 2026-06-16
 sev: info
 tag: notes
 summary: "I built a home security lab split into three network zones. This post proves one thing you can check: the web server can reach the internet, but it can never reach back into the network that matters."
