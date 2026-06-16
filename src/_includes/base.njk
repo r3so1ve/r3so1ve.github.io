@@ -43,7 +43,7 @@
   {{ content | safe }}
 
   <footer class="frame footer">
-    <div class="l">© {% if site.since %}{{ site.since }}–{% endif %}{{ build.year }} {{ site.title }}{% if site.license %} · all writing {{ site.license }}{% endif %}</div>
+    <div class="l">© {% if site.since %}{{ site.since }}–{% endif %}{{ build.year }} {{ site.title }}</div>
     <div class="c">└──────[ end of file ]──────┘</div>
     <div class="r">{% if site.github %}<a href="{{ site.github }}">github</a> · {% endif %}<a href="/sitemap.xml">sitemap</a>{% if site.pgp.fingerprint %} · <a href="{{ site.pgp.url or '#' }}">pgp</a>{% endif %}</div>
   </footer>

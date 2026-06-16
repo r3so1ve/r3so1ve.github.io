@@ -118,6 +118,7 @@ homepage: true
           <ul>
             <li><span class="k">focus</span><span class="v">{{ site.focus }}</span></li>
             {% if site.github %}<li><span class="k">github</span><span class="v"><a href="{{ site.github }}">{{ site.githubLabel or site.github }}</a></span></li>{% endif %}
+            {% if site.linkedin %}<li><span class="k">linkedin</span><span class="v"><a href="{{ site.linkedin }}">{{ site.linkedinLabel or site.linkedin }}</a></span></li>{% endif %}
             {% if site.email %}<li><span class="k">contact</span><span class="v"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span></li>{% endif %}
           </ul>
           {% if site.pgp.fingerprint %}<div class="fingerprint"><span class="label">PGP</span>{{ site.pgp.fingerprint | safe }}</div>{% endif %}

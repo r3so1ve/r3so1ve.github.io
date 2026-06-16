@@ -17,8 +17,8 @@ permalink: /about/
     <h2>Contact</h2>
     <ul>
       {% if site.github %}<li>GitHub: <a href="{{ site.github }}">{{ site.githubLabel or site.github }}</a></li>{% endif %}
+      {% if site.linkedin %}<li>LinkedIn: <a href="{{ site.linkedin }}">{{ site.linkedinLabel or site.linkedin }}</a></li>{% endif %}
       {% if site.email %}<li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% endif %}
-      <li>RSS: <a href="/feed.xml">/feed.xml</a></li>
       {% if not site.github and not site.email %}<li>Contact details coming soon.</li>{% endif %}
     </ul>
 

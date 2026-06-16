@@ -10,11 +10,11 @@ module.exports = {
 
   // Homepage masthead lede (edit freely; plain text)
   description:
-    "Security Forge is the working notebook of Arthur — a penetration tester and cybersecurity MS student writing about Web and Application security, Active Directory, Network Security, and AI/LLM security. Long-form posts, reproducible labs, plain language, no marketing copy.",
+    "Security Forge is the working notebook of Arthur — a penetration tester and aspiring security researcher writing about Web and Application security, Active Directory, Network Security, AI/LLM security and GRC. Long-form posts, reproducible labs, plain language, no marketing copy.",
 
   // 'about' side-panel + /about/ page blurb
   about:
-    "I'm Arthur — a penetration tester and cybersecurity MS student. I write about what I find and how I find it. Independent; no affiliations on this site.",
+    "I'm Arthur — a penetration tester and aspiring security researcher. I write about what I find and how I find it. Independent; no affiliations on this site.",
   focus: "web · appsec · ad · llm", // short label in the about panel
 
   // Footer / masthead
@@ -27,6 +27,8 @@ module.exports = {
   // Contact / social — leave "" to HIDE the item (no dead links, nothing fake)
   github: "https://github.com/r3so1ve", // e.g. "https://github.com/yourname"
   githubLabel: "@r3so1ve", // display text, e.g. "@yourname"; falls back to the URL
+  linkedin: "https://www.linkedin.com/in/artur-agakhanyants/", // "" to hide
+  linkedinLabel: "artur-agakhanyants", // display text; falls back to the URL
   email: "agakhanyantsartur@gmail.com", // e.g. "you@example.com"
   pgp: {
     fingerprint: "", // e.g. "4F2C 8A1B 9D33 ...". "" hides the whole PGP block
