@@ -15,11 +15,10 @@ module.exports = {
   // 'about' side-panel + /about/ page blurb
   about:
     "I'm Arthur — a penetration tester and aspiring security researcher. I write about what I find and how I find it. Independent; no affiliations on this site.",
-  focus: "web · appsec · ad · llm", // short label in the about panel
+  focus: "Web · AppSec · AD · LLM · GRC", // short label in the about panel
 
   // Footer / masthead
   since: 2026, // year you started writing; set to null to hide the "since" stat
-  license: "CC BY 4.0", // footer license line; "" to hide
 
   // Status-strip extras
   tzLabel: "", // e.g. "EST (UTC-5)"; "" hides the cell
