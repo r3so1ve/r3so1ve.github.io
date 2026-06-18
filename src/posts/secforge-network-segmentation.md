@@ -56,7 +56,7 @@ I built each zone as a host-only network, so by default the rooms are sealed off
 
 With the zones built, the real security lives in the firewall's rulebook. Two things about how it reads that book matter. It reads the rules from the top to bottom, and the first rule that matches a packet wins. And by default, its attitude toward the DMZ is "I don't know you, get out." Everything is blocked until you write a rule that allows it. That default is exactly the behavior you want.
 
-For the DMZ we need three rules. In plain English:11
+For the DMZ we need three rules. In plain English:
 
 1. Block anything from the DMZ trying to reach the trusted LAN.
 2. Block anything from the DMZ trying to reach the management zone.
