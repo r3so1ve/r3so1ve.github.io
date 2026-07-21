@@ -13,6 +13,7 @@ This is the second post in the SecForge series. The [first one](/posts/secforge-
 
 ## The short version
 
+
 I needed a target. The easiest option is to download OWASP Juice Shop or DVWA, point my tools at it, and call it a lab. Instead I spent a weekend writing my own vulnerable banking app in Flask, with thirteen planted flaws across the OWASP Top 10. This post is about why that was a right thing to do and what the app looks like. Step by step exploitation of each flaw, as well as part where one tool confidently told me there was no vulnerability when there absolutely was, is in here too.
 
 <div class="callout callout-warn">
